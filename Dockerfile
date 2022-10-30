@@ -16,10 +16,16 @@ RUN apt-get update && apt-get install -y \
     software-properties-common \
     curl
 
-RUN R -e "install.packages('pdftools', repos ='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('pdftools', repos ='http://cran.rstudio.com/')"
+
+RUN sudo add-apt-repository -y ppa:cran/poppler
+RUN sudo apt-get update
+RUN sudo apt-get install -y libpoppler-cpp-dev
+
 RUN R -e "install.packages('fs', repos ='http://cran.rstudio.com/')"
 RUN R -e "install.packages('data.table', repos ='http://cran.rstudio.com/')"
 RUN R -e "install.packages('xlsx', repos ='http://cran.rstudio.com/')"
+RUN R -e "install.packages('pdftools')"
 
 
 EXPOSE 8787
