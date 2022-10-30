@@ -11,8 +11,26 @@ irm get.scoop.sh | iex
 Then install 
 * git
 * R
-* Rstudio
 
 ```
+scoop install git
 scoop install r
+```
+
+To install Rstudio, we need to add the extras bucket
+
+```
+scoop bucket add extras
+```
+
+Then we can install Rstudio
+
+```
+scoop install rstudio
+```
+
+Now, clone this repository to your preferred location
+
+```
+git clone https://github.com/snakewizardd/pdf_counter_r.git
 ```
