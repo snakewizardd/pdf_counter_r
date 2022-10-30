@@ -1,2 +1,2 @@
-sudo docker stop rstudio_amid_container
+sudo docker stop rstudio_container
 yes | sudo docker container prune
