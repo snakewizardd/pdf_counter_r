@@ -56,7 +56,7 @@ for(pdf_document in all_pdfs){
 
 grand_total <- sum(output$number_of_pages)
 
-row <- data.frame(SEQ = 'Grand Total','Grand Total',number_of_pages = grand_total)
+row <- data.frame(SEQ = 'Grand Total',document_name = 'Grand Total',number_of_pages = grand_total)
 output <- rbind(output,row)
 
 #Writing the output file to the directory
