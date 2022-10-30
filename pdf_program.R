@@ -54,6 +54,11 @@ for(pdf_document in all_pdfs){
   
 }
 
+grand_total <- sum(output$number_of_pages)
+
+row <- data.frame(SEQ = 'Grand Total','Grand Total',number_of_pages = grand_total)
+output <- rbind(output,row)
+
 #Writing the output file to the directory
 #The name is a concatentation of 
 #1. System.time() output (for uniqueness)
