@@ -17,6 +17,7 @@ library(pdftools)
 library(fs)
 library(data.table)
 library(xlsx)
+library(writexl)
 
 #Store (as list contents) the full list of items in the working directory
 current_directory <- dir_ls()
@@ -57,5 +58,11 @@ for(pdf_document in all_pdfs){
 #2. the phrase _Output_file.xlsx
 
 #We have named the first sheet 'Summary of Pages'
-write.xlsx(output, paste0(Sys.time(),'_Output_file.xlsx'), 
-           sheetName = "Summary of Pages")
+#xlsx requires Java - if that is a problem- use Windows option below
+
+#Java Enabled:
+#write.xlsx(output, paste0(Sys.time(),'_Output_file.xlsx'), 
+#           sheetName = "Summary of Pages")
+
+#For Windows Scoop Users
+writexl::write_xlsx(output,paste0(Sys.time(),'_Output_file.xlsx'))

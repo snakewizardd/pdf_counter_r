@@ -26,6 +26,8 @@ RUN R -e "install.packages('fs', repos ='http://cran.rstudio.com/')"
 RUN R -e "install.packages('data.table', repos ='http://cran.rstudio.com/')"
 RUN R -e "install.packages('xlsx', repos ='http://cran.rstudio.com/')"
 RUN R -e "install.packages('pdftools')"
+RUN R -e "install.packages('writexl', repos ='http://cran.rstudio.com/')"
+
 
 
 EXPOSE 8787
