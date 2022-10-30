@@ -7,3 +7,12 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a 
 
 irm get.scoop.sh | iex
 ```
+
+Then install 
+* git
+* R
+* Rstudio
+
+```
+scoop install r
+```
