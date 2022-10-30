@@ -7,6 +7,8 @@
   # - for the 'like' operation
 # 4. xlsx
   # - to output in XLSX format
+# 5. - writexl
+  # - If you don't have Java, use writexl
 
 #Only run this code if the packages are not installed yet.
 #If using the accompanied Docker image, the packages are pre-installed.
