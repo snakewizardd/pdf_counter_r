@@ -18,7 +18,7 @@
 library(pdftools)
 library(fs)
 library(data.table)
-library(xlsx)
+#library(xlsx)
 library(writexl)
 
 #Store (as list contents) the full list of items in the working directory
